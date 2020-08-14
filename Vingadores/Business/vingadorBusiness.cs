@@ -11,13 +11,13 @@ namespace Vingadores.Business
         public void Inserir(Database.tb_heroi heroi)
         {
             if (heroi.nm_heroi.Length >= 200)
-                throw new ArgumentException("Limite de caracter atingido!");
+                throw new ArgumentException("Limite de caracteres atingido!");
 
             if (heroi.nm_heroi == string.Empty)
                 throw new ArgumentException("Campo vazio!");
 
             if (heroi.nm_nome.Length >= 200)
-                throw new ArgumentException("Limite de caracter atingido!");
+                throw new ArgumentException("Limite de caracteres atingido!");
 
             if (heroi.nm_nome == string.Empty)
                 throw new ArgumentException("Campo vazio!");
@@ -47,7 +47,7 @@ namespace Vingadores.Business
         public List<Database.tb_heroi> Listar(string heroi, string status)
         {
             if (heroi.Length >= 200)
-                throw new ArgumentException("Limite de caracter atingido!");
+                throw new ArgumentException("Limite de caracteres atingido!");
 
             Database.VingadorDatabase db = new Database.VingadorDatabase();
             List<Database.tb_heroi> herois = db.Listar(heroi, status);
@@ -64,13 +64,13 @@ namespace Vingadores.Business
         public void Alterar(Database.tb_heroi heroi)
         {
             if (heroi.nm_heroi.Length >= 200)
-                throw new ArgumentException("Limite de caracter atingido!");
+                throw new ArgumentException("Limite de caracteres atingido!");
 
             if (heroi.nm_heroi == string.Empty)
                 throw new ArgumentException("Campo vazio!");
 
             if (heroi.nm_nome.Length >= 200)
-                throw new ArgumentException("Limite de caracter atingido!");
+                throw new ArgumentException("Limite de caracteres atingido!");
 
             if (heroi.nm_nome == string.Empty)
                 throw new ArgumentException("Campo vazio!");
